@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_continue"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Select your City" />
+
+        <RadioGroup
+            android:id="@+id/rg_india"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/rb_bangloor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Bangloor" />
+
+            <RadioButton
+                android:id="@+id/rb_chennai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+
+                android:text="Chennai" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rg_uae"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/rb_dubai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Dubai" />
+
+            <RadioButton
+                android:id="@+id/rb_abudhabi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:text="Abu Dhabi" />
+
+            <RadioButton
+                android:id="@+id/rb_sharjah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+
+                android:text="Sharjah" />
+
+            <RadioButton
+                android:id="@+id/rb_ajman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:text="Ajman" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_continue"
+        style="@android:style/Widget.Holo.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green"
+        android:text="Continue"
+        android:textColor="@color/white" />
+</RelativeLayout>
