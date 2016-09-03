@@ -1,8 +1,13 @@
 package com.carlorry.activity;
 
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.carlorry.Utils.Constants;
+import com.carlorry.fragments.CountrySelectionFragment;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -27,8 +32,9 @@ public class SplashActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
-                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                    startActivity(intent);
+                    FragmentManager fm = getSupportFragmentManager();
+                    CountrySelectionFragment countrySelectionFragment = CountrySelectionFragment.newInstance();
+                    countrySelectionFragment.show(fm, Constants.KEY_CountrySelection);
                 }
             }
         };

@@ -5,6 +5,7 @@ package com.carlorry.Utils;
  */
 public class Constants {
     public static String KEY_CountrySelection ="CountrySelection";
+    public static String KEY_CitySelection ="CitySelection";
     public static String KEY_DateSelection ="DateSelection";
     public static String KEY_TimeSelection ="TimeSelection";
 }

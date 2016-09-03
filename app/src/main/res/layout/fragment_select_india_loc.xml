@@ -6,8 +6,7 @@
     android:background="#ffffff"
     android:gravity="center_vertical|center_horizontal"
     android:orientation="vertical"
-    android:padding="50dp"
-    tools:context="com.carlorry.app.SelectIndiaLoc">
+    android:padding="50dp">
 
 
     <LinearLayout
@@ -39,7 +38,7 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_done"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/theme_button_square2"
@@ -47,11 +46,10 @@
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
                 android:paddingTop="15dp"
-                android:textColor="#2750a8"
-                android:text="@string/Done" />
+                android:text="@string/Done"
+                android:textColor="#2750a8" />
 
         </LinearLayout>
-
 
 
         <LinearLayout
@@ -63,88 +61,88 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:orientation="horizontal"
-                android:background="#f9f9f9"
                 android:layout_margin="2dp"
-                android:gravity="center_vertical">
+                android:background="#f9f9f9"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
+                    android:paddingLeft="10dp"
                     android:text="@string/Bangalore"
-                    android:paddingLeft="10dp"
                     android:textColor="#333333"
-                    android:layout_gravity="center_vertical"
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/radioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/radio_button_style1"
-                    android:button="@android:color/transparent"
-                    android:id="@+id/radioButton" />
+                    android:button="@android:color/transparent" />
             </LinearLayout>
 
-            <include layout="@layout/include_location"/>
-            <include layout="@layout/include_location"/>
+            <include layout="@layout/include_location" />
+
+            <include layout="@layout/include_location" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:orientation="horizontal"
-                android:background="#f9f9f9"
                 android:layout_margin="2dp"
-                android:gravity="center_vertical">
+                android:background="#f9f9f9"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
+                    android:paddingLeft="10dp"
                     android:text="@string/Coimbatore"
-                    android:paddingLeft="10dp"
                     android:textColor="#333333"
-                    android:layout_gravity="center_vertical"
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/radioButton4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/radio_button_style1"
-                    android:button="@android:color/transparent"
-                    android:id="@+id/radioButton4" />
+                    android:button="@android:color/transparent" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:orientation="horizontal"
-                android:background="#f9f9f9"
                 android:layout_margin="2dp"
-                android:gravity="center_vertical">
+                android:background="#f9f9f9"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/Cochin"
-                    android:paddingLeft="10dp"
-                    android:textColor="#333333"
                     android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="@string/Cochin"
+                    android:textColor="#333333"
                     android:textSize="16sp" />
 
                 <RadioButton
+                    android:id="@+id/radioButton5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/radio_button_style1"
-                    android:button="@android:color/transparent"
-                    android:id="@+id/radioButton5" />
+                    android:button="@android:color/transparent" />
             </LinearLayout>
-
 
 
         </LinearLayout>
