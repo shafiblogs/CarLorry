@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".TripSelectionActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".SearchResultActivity" />
     </application>
 
 </manifest>

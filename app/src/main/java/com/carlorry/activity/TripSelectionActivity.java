@@ -1,5 +1,6 @@
 package com.carlorry.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -63,15 +64,17 @@ public class TripSelectionActivity extends AppCompatActivity {
         ((Button) findViewById(R.id.btn_continue)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isStartSelected) {
-                    isStartSelected = false;
-                    layStart.setBackgroundColor(getResources().getColor(R.color.white));
-                    layEnd.setBackgroundColor(getResources().getColor(R.color.lt_grey));
-                } else {
-                    isStartSelected = true;
-                    layStart.setBackgroundColor(getResources().getColor(R.color.lt_grey));
-                    layEnd.setBackgroundColor(getResources().getColor(R.color.white));
-                }
+//                if (isStartSelected) {
+//                    isStartSelected = false;
+//                    layStart.setBackgroundColor(getResources().getColor(R.color.white));
+//                    layEnd.setBackgroundColor(getResources().getColor(R.color.lt_grey));
+//                } else {
+//                    isStartSelected = true;
+//                    layStart.setBackgroundColor(getResources().getColor(R.color.lt_grey));
+//                    layEnd.setBackgroundColor(getResources().getColor(R.color.white));
+//                }
+                Intent intent = new Intent(TripSelectionActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
     }

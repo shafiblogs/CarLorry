@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.carlorry.Utils.Constants;
+import com.carlorry.activity.HomeActivity;
 import com.carlorry.activity.R;
 import com.carlorry.activity.TripSelectionActivity;
 
@@ -41,7 +42,7 @@ public class CitySelectionFragment extends DialogFragment {
         ((Button) rootView.findViewById(R.id.btn_done)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), TripSelectionActivity.class);
+                Intent intent = new Intent(getActivity(), HomeActivity.class);
                 startActivity(intent);
             }
         });
