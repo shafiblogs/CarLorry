@@ -2,27 +2,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="5dp"
-    android:orientation="horizontal"
-    android:background="#f9f9f9"
     android:layout_margin="2dp"
-    android:gravity="center_vertical">
+    android:background="#f9f9f9"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="5dp">
 
     <TextView
+        android:id="@+id/tv_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/Chennai"
-        android:paddingLeft="10dp"
-        android:textColor="#333333"
         android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:text="@string/Chennai"
+        android:textColor="#333333"
         android:textSize="16sp" />
 
     <RadioButton
+        android:id="@+id/rb_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/radio_button_style1"
-        android:button="@android:color/transparent"
-        android:id="@+id/radioButton2" />
+        android:button="@android:color/transparent" />
 
 </LinearLayout>
