@@ -8,7 +8,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
@@ -19,8 +18,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".TripSelectionActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".Home2Activity" />
         <activity android:name=".SearchResultActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.carlorry.activity.SplashActivity" />
+        </activity>
     </application>
 
 </manifest>
