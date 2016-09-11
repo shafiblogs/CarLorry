@@ -47,4 +47,9 @@
     <string name="RefundableDeposit">Refundable Deposit</string>
     <string name="RefundableDepositDescription">This amount will be refunded once your booking is over. You can pay this 24 hours before your booking starts.</string>
     <string name="PayableAmount">Payable Amount</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

@@ -3,6 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="unread_background">#B3B3B3</color>
 
     <color name="grey">#707070</color>
     <color name="lt_grey">#eeeeee</color>
@@ -12,4 +13,8 @@
     <color name="yellow">#FFFF3C</color>
     <color name="ltgreen">#7ACB46</color>
     <color name="green">#3A6616</color>
+
+
+    <color name="card_bg">#EAEAEA</color>
+    <color name="card_text">#395590</color>
 </resources>
