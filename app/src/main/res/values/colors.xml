@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#426AC1</color>
-    <color name="colorPrimaryDark">#2750A8</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="unread_background">#B3B3B3</color>
 
@@ -15,6 +15,12 @@
     <color name="green">#3A6616</color>
 
 
-    <color name="card_bg">#377DB0</color>
-    <color name="card_text_bg">#30739E</color>
+    <color name="card_bg">#EAEAEA</color>
+    <color name="card_text">#395590</color>
+
+    <color name="rent_car_card_bg">#4d79d9</color>
+    <color name="rent_car_card_text">#436bc1</color>
+
+
+
 </resources>
