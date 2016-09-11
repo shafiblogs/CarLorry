@@ -17,4 +17,10 @@
 
     <color name="card_bg">#EAEAEA</color>
     <color name="card_text">#395590</color>
+
+    <color name="rent_car_card_bg">#4d79d9</color>
+    <color name="rent_car_card_text">#436bc1</color>
+
+
+
 </resources>
