@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+
+
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="2dp">
+
+        <Button
+            android:id="@+id/btnTime1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btnTime2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btnTime3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btnTime4"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btnTime5"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btnTime6"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="6" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="2dp">
+
+        <Button
+            android:id="@+id/btnTime7"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btnTime8"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btnTime9"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btnTime10"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="10" />
+
+        <Button
+            android:id="@+id/btnTime11"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="11" />
+
+        <Button
+            android:id="@+id/btnTime12"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="12" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="2dp">
+
+        <Button
+            android:id="@+id/btnTime13"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="13" />
+
+        <Button
+            android:id="@+id/btnTime14"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="14" />
+
+        <Button
+            android:id="@+id/btnTime15"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="15" />
+
+        <Button
+            android:id="@+id/btnTime16"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="16" />
+
+        <Button
+            android:id="@+id/btnTime17"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="17" />
+
+        <Button
+            android:id="@+id/btnTime18"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="18" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="2dp">
+
+        <Button
+            android:id="@+id/btnTime19"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="19" />
+
+        <Button
+            android:id="@+id/btnTime20"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="20" />
+
+        <Button
+            android:id="@+id/btnTime21"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="21" />
+
+        <Button
+            android:id="@+id/btnTime22"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="22" />
+
+        <Button
+            android:id="@+id/btnTime23"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="23" />
+
+        <Button
+            android:id="@+id/btnTime24"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/theme_button_circle1_blue"
+            android:textSize="24sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="24" />
+
+    </LinearLayout>
+
+</LinearLayout>
