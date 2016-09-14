@@ -3,5 +3,5 @@
         android:drawable="@drawable/lease_car_icon_2"
         android:state_checked="true" />
     <item
-        android:drawable="@drawable/lease_car_icon" />
+        android:drawable="@drawable/card_lease_car" />
 </selector>
