@@ -1,26 +1,8 @@
 package com.carlorry.activity;
 
-import android.animation.AnimatorSet;
-import android.animation.LayoutTransition;
-import android.animation.ObjectAnimator;
-import android.content.ClipData;
-import android.content.ClipDescription;
 import android.content.Intent;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Point;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.CardView;
-import android.util.Log;
-import android.view.Display;
-import android.view.DragEvent;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -29,16 +11,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.carlorry.Utils.StringUtils;
-import com.carlorry.views.DraggableFlowLayout;
-
-import java.util.ArrayList;
+import com.carlorry.Utils.Constants;
+import com.carlorry.fragments.CitySelectionFragment;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
@@ -89,6 +68,8 @@ public class HomeActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            CitySelectionFragment citySelectionFragment = CitySelectionFragment.newInstance(1, false);
+            citySelectionFragment.show(getSupportFragmentManager(), Constants.KEY_CitySelection);
             return true;
         }
 
@@ -101,23 +82,40 @@ public class HomeActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_my_booking) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_location) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_rates) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_terms_conditions) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_how_we_works) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_faq) {
+
+        } else if (id == R.id.nav_about) {
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.card_rent_car:
+            case R.id.card_lease_car:
+            case R.id.card_rent_bike:
+            case R.id.card_limousine:
+                startActivity(new Intent(HomeActivity.this, TripSelectionActivity.class));
+                break;
+            case R.id.fab:
+                startActivity(new Intent(HomeActivity.this, SearchResultActivity.class));
+                break;
+        }
     }
 
     private void initializeViews() {
@@ -156,21 +154,5 @@ public class HomeActivity extends AppCompatActivity
         bottomLimousine.setBackgroundColor(getResources().getColor(R.color.card_limousine_footer));
         ((TextView) viewLimousine.findViewById(R.id.tv_footer)).setText("LIMOUSINE");
         viewLimousine.setOnClickListener(this);
-    }
-
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.card_rent_car:
-            case R.id.card_lease_car:
-            case R.id.card_rent_bike:
-            case R.id.card_limousine:
-                startActivity(new Intent(HomeActivity.this, TripSelectionActivity.class));
-                break;
-            case R.id.fab:
-                startActivity(new Intent(HomeActivity.this, SearchResultActivity.class));
-                break;
-        }
     }
 }

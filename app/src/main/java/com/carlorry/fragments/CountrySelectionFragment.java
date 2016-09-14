@@ -1,12 +1,15 @@
 package com.carlorry.fragments;
 
+import android.app.Dialog;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -40,12 +43,22 @@ public class CountrySelectionFragment extends DialogFragment implements View.OnC
         return rootView;
     }
 
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        Dialog dialog = super.onCreateDialog(savedInstanceState);
+
+        // request a window without the title
+        dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        return dialog;
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_done:
                 FragmentManager fm = getActivity().getSupportFragmentManager();
-                CitySelectionFragment citySelectionFragment = CitySelectionFragment.newInstance(selCountry);
+                CitySelectionFragment citySelectionFragment = CitySelectionFragment.newInstance(selCountry, true);
                 citySelectionFragment.show(fm, Constants.KEY_CitySelection);
                 dismiss();
                 break;
