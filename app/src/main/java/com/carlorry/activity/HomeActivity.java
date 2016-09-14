@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -132,6 +133,7 @@ public class HomeActivity extends AppCompatActivity
         cardViewRentCar.setBackgroundColor(getResources().getColor(R.color.card_rent_car_bg));
         bottomRentCar.setBackgroundColor(getResources().getColor(R.color.card_rent_car_footer));
         ((TextView) viewRentCar.findViewById(R.id.tv_footer)).setText("RENT A CAR");
+        ((ImageView) viewRentCar.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_rent_car);
         viewRentCar.setOnClickListener(this);
 
         RelativeLayout cardViewLeaseCar = (RelativeLayout) viewLeaseCar.findViewById(R.id.card_view);
@@ -139,6 +141,7 @@ public class HomeActivity extends AppCompatActivity
         cardViewLeaseCar.setBackgroundColor(getResources().getColor(R.color.card_lease_car_bg));
         bottomLeaseCar.setBackgroundColor(getResources().getColor(R.color.card_lease_car_footer));
         ((TextView) viewLeaseCar.findViewById(R.id.tv_footer)).setText("LEASE A CAR");
+        ((ImageView) viewRentCar.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_lease_car);
         viewLeaseCar.setOnClickListener(this);
 
         RelativeLayout cardViewRentBike = (RelativeLayout) viewRentBike.findViewById(R.id.card_view);
@@ -146,6 +149,7 @@ public class HomeActivity extends AppCompatActivity
         cardViewRentBike.setBackgroundColor(getResources().getColor(R.color.card_rent_bike_bg));
         bottomRentBike.setBackgroundColor(getResources().getColor(R.color.card_rent_bike_footer));
         ((TextView) viewRentBike.findViewById(R.id.tv_footer)).setText("RENT A BIKE");
+        ((ImageView) viewRentCar.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_rent_bike);
         viewRentBike.setOnClickListener(this);
 
         RelativeLayout cardViewLimousine = (RelativeLayout) viewLimousine.findViewById(R.id.card_view);
@@ -153,6 +157,7 @@ public class HomeActivity extends AppCompatActivity
         cardViewLimousine.setBackgroundColor(getResources().getColor(R.color.card_limousine_bg));
         bottomLimousine.setBackgroundColor(getResources().getColor(R.color.card_limousine_footer));
         ((TextView) viewLimousine.findViewById(R.id.tv_footer)).setText("LIMOUSINE");
+        ((ImageView) viewRentCar.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_limousine);
         viewLimousine.setOnClickListener(this);
     }
 }
