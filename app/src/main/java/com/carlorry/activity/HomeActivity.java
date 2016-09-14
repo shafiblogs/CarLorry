@@ -53,29 +53,29 @@ public class HomeActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            CitySelectionFragment citySelectionFragment = CitySelectionFragment.newInstance(1, false);
-            citySelectionFragment.show(getSupportFragmentManager(), Constants.KEY_CitySelection);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.home, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            CitySelectionFragment citySelectionFragment = CitySelectionFragment.newInstance(1, false);
+//            citySelectionFragment.show(getSupportFragmentManager(), Constants.KEY_CitySelection);
+//            return true;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -133,7 +133,7 @@ public class HomeActivity extends AppCompatActivity
         cardViewRentCar.setBackgroundColor(getResources().getColor(R.color.card_rent_car_bg));
         bottomRentCar.setBackgroundColor(getResources().getColor(R.color.card_rent_car_footer));
         ((TextView) viewRentCar.findViewById(R.id.tv_footer)).setText("RENT A CAR");
-        ((ImageView) viewRentCar.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_rent_car);
+        ((ImageView) viewRentCar.findViewById(R.id.iv_card)).setImageResource(R.mipmap.ic_rencar);
         viewRentCar.setOnClickListener(this);
 
         RelativeLayout cardViewLeaseCar = (RelativeLayout) viewLeaseCar.findViewById(R.id.card_view);
