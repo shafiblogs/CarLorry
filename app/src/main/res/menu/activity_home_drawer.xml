@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_my_booking"
+            android:icon="@drawable/icon_my_booking"
+            android:title="My Booking" />
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/icon_location_white"
+            android:title="Location" />
+        <item
+            android:id="@+id/nav_rates"
+            android:icon="@drawable/icon_rates"
+            android:title="Rates" />
+        <item
+            android:id="@+id/nav_terms_conditions"
+            android:icon="@drawable/icon_terms_conditions"
+            android:title="Terms Conditons" />
+        <item
+            android:id="@+id/nav_how_we_works"
+            android:icon="@drawable/icon_how_we"
+            android:title="How We Works" />
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/icon_faq"
+            android:title="FAQ" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/icon_about"
+            android:title="About" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_chat"
+                android:icon="@drawable/icon_chat"
+                android:title="Chat With us" />
+            <item
+                android:id="@+id/nav_call"
+                android:icon="@drawable/icon_callus"
+                android:title="Call Us" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/icon_feedback"
+                android:title="Feed back" />
+        </menu>
+    </item>
+
+</menu>
