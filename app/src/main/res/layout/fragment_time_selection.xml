@@ -54,7 +54,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="1"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime2"
@@ -64,7 +64,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="2"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime3"
@@ -74,7 +74,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="3"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime4"
@@ -84,7 +84,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="4"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime5"
@@ -94,7 +94,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="5"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime6"
@@ -104,7 +104,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="6"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -124,7 +124,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="7"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime8"
@@ -134,7 +134,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="8"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime9"
@@ -144,7 +144,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="9"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime10"
@@ -154,7 +154,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="10"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime11"
@@ -164,7 +164,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="11"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime12"
@@ -174,7 +174,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="12"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -194,7 +194,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="13"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime14"
@@ -204,7 +204,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="14"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime15"
@@ -214,7 +214,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="15"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime16"
@@ -224,7 +224,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="16"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime17"
@@ -234,7 +234,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="17"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime18"
@@ -244,7 +244,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="18"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -264,7 +264,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="19"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime20"
@@ -274,7 +274,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="20"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime21"
@@ -284,7 +284,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="21"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime22"
@@ -294,7 +294,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="22"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime23"
@@ -304,7 +304,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="23"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnTime24"
@@ -314,7 +314,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/theme_button_circle1_blue"
             android:text="24"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
