@@ -31,14 +31,15 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/logo_white" />
 
-                <TextView
+                <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/Bangalore"
+                    android:gravity="center_vertical"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="@dimen/component_margin"
-                    android:gravity="center_vertical"
-                    android:text="@string/Bangalore" />
+                    android:drawableLeft="@drawable/icon_location_white"
+                    android:background="@color/bpTransparent"/>
 
             </RelativeLayout>
 

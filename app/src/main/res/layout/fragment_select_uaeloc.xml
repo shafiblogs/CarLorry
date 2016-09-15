@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/theme_frame_border_c2"
             android:orientation="horizontal"
-            android:paddingBottom="@dimen/component_margin"
+            android:paddingBottom="@dimen/normal_margin"
 
             android:weightSum="1">
 
@@ -30,19 +30,19 @@
                 android:layout_weight="1"
                 android:text="@string/uae"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="@dimen/xlar_text_size" />
 
             <Button
                 android:id="@+id/btn_done"
+                style="@android:style/Holo.Light.ButtonBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/theme_button_square2"
-                android:paddingBottom="15dp"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:paddingTop="15dp"
+                android:gravity="right"
                 android:text="@string/Done"
-                android:textColor="#2750a8" />
+                android:textSize="@dimen/nor_text_size"
+                android:textColor="@color/colorPrimary"
+                android:padding="@dimen/normal_margin" />
 
         </LinearLayout>
 
