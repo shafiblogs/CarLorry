@@ -1,5 +1,6 @@
 package com.carlorry.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -8,11 +9,21 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.carlorry.Utils.Constants;
+import com.carlorry.adapter.SearchResultAdapter;
+import com.carlorry.models.Result;
+
+import java.util.ArrayList;
 
 /**
  * Created by muhammed.poyil on 9/3/2016.
  */
-public class SearchResultActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class SearchResultActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +40,22 @@ public class SearchResultActivity extends AppCompatActivity implements Navigatio
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        // Construct the data source
+        ArrayList<Result> results = new ArrayList<Result>();
+        for (int i = 0; i < 10; i++) {
+            Result result = new Result(i);
+            results.add(result);
+        }
+
+        // Create the adapter to convert the array to views
+        ListView listView = (ListView) findViewById(R.id.listView);
+        listView.setOnItemClickListener(this);
+
+        SearchResultAdapter adapter = new SearchResultAdapter(this, results);
+        // Attach the adapter to a ListView
+        listView.setAdapter(adapter);
     }
 
     @Override
@@ -38,6 +65,7 @@ public class SearchResultActivity extends AppCompatActivity implements Navigatio
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
     }
 
@@ -66,5 +94,14 @@ public class SearchResultActivity extends AppCompatActivity implements Navigatio
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+//        Toast.makeText(SearchResultActivity.this, "Clicked at positon = " + position, Toast.LENGTH_SHORT).show();
+        Intent containerIntent = new Intent(SearchResultActivity.this, ContainerActivity.class);
+        containerIntent.putExtra(Constants.BUNDLE_FRAGMENT_ID, Constants.FRAGMENT_SEARCH_DETAILS);
+        startActivity(containerIntent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 }

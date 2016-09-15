@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -38,6 +39,7 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        ((Button) findViewById(R.id.btn_city)).setOnClickListener(this);
 
         initializeViews();
 
@@ -50,6 +52,7 @@ public class HomeActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
     }
 
@@ -116,7 +119,12 @@ public class HomeActivity extends AppCompatActivity
             case R.id.fab:
                 startActivity(new Intent(HomeActivity.this, SearchResultActivity.class));
                 break;
+            case R.id.btn_city:
+                CitySelectionFragment citySelectionFragment = CitySelectionFragment.newInstance(1, false);
+                citySelectionFragment.show(getSupportFragmentManager(), Constants.KEY_CitySelection);
+                break;
         }
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     private void initializeViews() {
