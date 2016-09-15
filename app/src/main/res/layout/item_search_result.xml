@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:orientation="vertical"
-    android:padding="0dp"
-    tools:context="com.carlorry.app.DatarowSearchResult">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_margin="5dp"
-        android:orientation="horizontal"
         android:background="@drawable/theme_frame_border_c3"
+        android:orientation="horizontal"
         android:weightSum="1">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.4"
-            android:padding="2dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="2dp">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -36,13 +32,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
                 android:layout_marginTop="-25sp"
+                android:autoText="false"
                 android:background="#90ffffff"
                 android:gravity="center"
                 android:text="BMW"
                 android:textColor="#2750a8"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:autoText="false" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -50,16 +46,16 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
-            android:weightSum="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:padding="5dp"
+                android:layout_weight="0.5"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:layout_weight="0.5">
+                android:padding="5dp">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -73,18 +69,19 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_marginLeft="5dp"
                 android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
                 android:background="#dcddde"
                 android:orientation="vertical"></LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:padding="5dp"
+                android:layout_weight="0.5"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:layout_weight="0.5">
+                android:padding="5dp">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -95,28 +92,29 @@
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
             android:layout_width="1dp"
             android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
             android:background="#dcddde"
-            android:orientation="vertical"> </LinearLayout>
+            android:orientation="vertical"></LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
-            android:weightSum="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:padding="5dp"
+                android:layout_weight="0.5"
                 android:gravity="right|center"
                 android:orientation="horizontal"
-                android:layout_weight="0.5">
+                android:padding="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -125,42 +123,42 @@
                     android:text="7000"
                     android:textColor="@android:color/black"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="left"
                     android:paddingLeft="10dp"
                     android:paddingRight="5dp"
-                    android:gravity="left"
                     android:text="AED"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
             </LinearLayout>
-
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:padding="5dp"
+                android:layout_weight="0.5"
                 android:gravity="center|center_vertical"
                 android:orientation="horizontal"
-                android:layout_weight="0.5">
+                android:padding="5dp">
 
                 <Button
+                    android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:minWidth="90dp"
-                    android:textColor="#ffffff"
                     android:background="@drawable/theme_button_square3_blue"
+                    android:focusable="false"
+                    android:minWidth="90dp"
+                    android:padding="10dp"
                     android:text="@string/book"
-                    android:id="@+id/button2" />
+                    android:textColor="#ffffff" />
 
             </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
-
 </LinearLayout>
