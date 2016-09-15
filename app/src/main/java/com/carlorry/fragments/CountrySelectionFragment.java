@@ -25,7 +25,9 @@ public class CountrySelectionFragment extends DialogFragment implements View.OnC
     private int selCountry = 0;
 
     public static CountrySelectionFragment newInstance() {
-        return new CountrySelectionFragment();
+        CountrySelectionFragment dialogFragment = new CountrySelectionFragment();
+        dialogFragment.setStyle(DialogFragment.STYLE_NORMAL, R.style.My_Dialog);
+        return dialogFragment;
     }
 
     @Nullable
@@ -43,15 +45,6 @@ public class CountrySelectionFragment extends DialogFragment implements View.OnC
         return rootView;
     }
 
-    @NonNull
-    @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        Dialog dialog = super.onCreateDialog(savedInstanceState);
-
-        // request a window without the title
-        dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        return dialog;
-    }
 
     @Override
     public void onClick(View view) {

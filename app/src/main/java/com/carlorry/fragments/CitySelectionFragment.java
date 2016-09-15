@@ -28,6 +28,7 @@ public class CitySelectionFragment extends DialogFragment implements View.OnClic
 
     public static CitySelectionFragment newInstance(int SelCountry, boolean isFromSplash) {
         CitySelectionFragment fragment = new CitySelectionFragment();
+        fragment.setStyle(DialogFragment.STYLE_NORMAL, R.style.My_Dialog);
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_Id, SelCountry);
         args.putBoolean(ARG_SECTION_TAG, isFromSplash);

@@ -133,7 +133,7 @@ public class HomeActivity extends AppCompatActivity
         cardViewRentCar.setBackgroundColor(getResources().getColor(R.color.card_rent_car_bg));
         bottomRentCar.setBackgroundColor(getResources().getColor(R.color.card_rent_car_footer));
         ((TextView) viewRentCar.findViewById(R.id.tv_footer)).setText("RENT A CAR");
-        ((ImageView) viewRentCar.findViewById(R.id.iv_card)).setImageResource(R.mipmap.ic_rencar);
+        ((ImageView) viewRentCar.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_rent_car);
         viewRentCar.setOnClickListener(this);
 
         RelativeLayout cardViewLeaseCar = (RelativeLayout) viewLeaseCar.findViewById(R.id.card_view);

@@ -1,5 +1,6 @@
 package com.carlorry.activity;
 
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -13,9 +14,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TimePicker;
 
 import com.carlorry.Utils.Constants;
 import com.carlorry.fragments.CountrySelectionFragment;
+import com.carlorry.fragments.TimePickerFragment;
 import com.carlorry.fragments.TimeSelectionFragment;
 import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidListener;
@@ -27,7 +30,7 @@ import java.util.Date;
 /**
  * Created by muhammed.poyil on 8/20/2016.
  */
-public class TripSelectionActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class TripSelectionActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, TimePickerDialog.OnTimeSetListener {
 //    private TextView tvStartDate, tvEndDate, tvStartTime, tvEndTime;
 //    private LinearLayout layStart, layEnd;
 //    private boolean isStartSelected = false;
@@ -141,7 +144,10 @@ public class TripSelectionActivity extends AppCompatActivity implements Navigati
 //                tvEndDate.setText(formatter.format(date));
 //            else
 //                tvStartDate.setText(formatter.format(date));
-            TimeSelectionFragment timeSelectionFragment = TimeSelectionFragment.newInstance();
+//            TimeSelectionFragment timeSelectionFragment = TimeSelectionFragment.newInstance();
+//            timeSelectionFragment.show(getSupportFragmentManager(), Constants.KEY_TimeSelection);
+
+            TimePickerFragment timeSelectionFragment = new TimePickerFragment();
             timeSelectionFragment.show(getSupportFragmentManager(), Constants.KEY_TimeSelection);
         }
 
@@ -163,4 +169,9 @@ public class TripSelectionActivity extends AppCompatActivity implements Navigati
         }
 
     };
+
+    @Override
+    public void onTimeSet(TimePicker timePicker, int i, int i1) {
+
+    }
 }

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="0dp"
-    android:background="#ffffff"
-
+    android:background="@drawable/dialog_background_inset"
     android:gravity="center_vertical|center_horizontal"
     android:orientation="vertical">
 
@@ -13,7 +10,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:orientation="vertical"
         android:weightSum="1">
 
@@ -23,10 +19,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/theme_frame_border_c2"
             android:orientation="horizontal"
-            android:paddingBottom="3dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="3dp"
+            android:padding="@dimen/component_margin"
             android:weightSum="1">
 
             <TextView
@@ -49,7 +42,8 @@
                 android:paddingRight="2dp"
                 android:paddingTop="0dp"
                 android:text="@string/Done"
-                android:textColor="#2750a8" />
+                android:textColor="#2750a8"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
