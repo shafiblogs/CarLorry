@@ -74,6 +74,7 @@ public class CitySelectionFragment extends DialogFragment implements View.OnClic
                 if (isFromSplash) {
                     Intent intent = new Intent(getActivity(), HomeActivity.class);
                     startActivity(intent);
+                    getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
                 dismiss();
                 break;

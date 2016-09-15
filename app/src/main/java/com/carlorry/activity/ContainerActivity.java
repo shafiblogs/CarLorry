@@ -1,34 +1,29 @@
 package com.carlorry.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.Toast;
 
 import com.carlorry.Utils.Constants;
-import com.carlorry.adapter.SearchResultAdapter;
-import com.carlorry.models.Result;
+import com.carlorry.fragments.SearchDetailFragment;
 
-import java.util.ArrayList;
 
 /**
  * Created by muhammed.poyil on 9/3/2016.
  */
-public class SearchResultActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemClickListener {
+public class ContainerActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    private int frgmtId = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_result);
+        setContentView(R.layout.activity_container);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -43,19 +38,9 @@ public class SearchResultActivity extends AppCompatActivity implements Navigatio
 
 
         // Construct the data source
-        ArrayList<Result> results = new ArrayList<Result>();
-        for (int i = 0; i < 10; i++) {
-            Result result = new Result(i);
-            results.add(result);
-        }
+        frgmtId = getIntent().getIntExtra(Constants.BUNDLE_FRAGMENT_ID, 0);
+        replaceNewFragment();
 
-        // Create the adapter to convert the array to views
-        ListView listView = (ListView) findViewById(R.id.listView);
-        listView.setOnItemClickListener(this);
-
-        SearchResultAdapter adapter = new SearchResultAdapter(this, results);
-        // Attach the adapter to a ListView
-        listView.setAdapter(adapter);
     }
 
     @Override
@@ -96,12 +81,15 @@ public class SearchResultActivity extends AppCompatActivity implements Navigatio
         return true;
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-//        Toast.makeText(SearchResultActivity.this, "Clicked at positon = " + position, Toast.LENGTH_SHORT).show();
-        Intent containerIntent = new Intent(SearchResultActivity.this, ContainerActivity.class);
-        containerIntent.putExtra(Constants.BUNDLE_FRAGMENT_ID, Constants.FRAGMENT_SEARCH_DETAILS);
-        startActivity(containerIntent);
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    public void replaceNewFragment() {
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        switch (frgmtId) {
+            case Constants.FRAGMENT_SEARCH_DETAILS:
+                ft.replace(R.id.container, new SearchDetailFragment(), Constants.KEY_SEARCH_DETAILS);
+                ft.commit();
+                break;
+            default:
+                break;
+        }
     }
 }

@@ -79,6 +79,7 @@ public class TripSelectionActivity extends AppCompatActivity implements Navigati
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
     }
 
@@ -131,6 +132,7 @@ public class TripSelectionActivity extends AppCompatActivity implements Navigati
 //                }
                 Intent intent = new Intent(TripSelectionActivity.this, SearchResultActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
     }
