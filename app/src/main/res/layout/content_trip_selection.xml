@@ -33,13 +33,7 @@
 
     <Button
         android:id="@+id/btn_continue"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/footer_button"
         android:layout_alignParentBottom="true"
-        android:background="@color/green"
-        android:gravity="center"
-        android:text="Continue"
-        android:textColor="@color/white"
-        android:textSize="@dimen/lar_text_size" />
+        android:text="Continue" />
 </RelativeLayout>

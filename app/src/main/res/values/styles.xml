@@ -15,7 +15,16 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <style name="My.Dialog" parent="android:style/Theme.Dialog" >
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="My.Dialog" parent="android:style/Theme.Dialog">
         <item name="android:windowBackground">@color/bpTransparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
@@ -72,13 +81,13 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="footer_button" parent="match_wrap">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/bpDarker_blue</item>
+        <item name="android:textSize">@dimen/lar_text_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
     </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

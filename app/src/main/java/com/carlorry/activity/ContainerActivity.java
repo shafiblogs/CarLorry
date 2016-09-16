@@ -53,10 +53,10 @@ public class ContainerActivity extends AppCompatActivity {
                 ft.replace(R.id.container, new SearchDetailFragment(), Constants.KEY_SEARCH_DETAILS);
                 ft.commit();
                 break;
-//            case Constants.FRAGMENT_BOOK:
-//                ft.replace(R.id.container, new BookFragment(), Constants.KEY_BOOK);
-//                ft.commit();
-//                break;
+            case Constants.FRAGMENT_SIGN_UP:
+                ft.replace(R.id.container, new SignUpFragment(), Constants.KEY_SIGN_UP);
+                ft.commit();
+                break;
             case Constants.FRAGMENT_BOOK:
                 ft.replace(R.id.container, new SignUpFragment(), Constants.KEY_BOOK);
                 ft.commit();

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:orientation="vertical"
-    android:padding="0dp"
-    tools:context="com.carlorry.app.CarDetails">
-
+    android:orientation="vertical">
 
 
     <LinearLayout
@@ -774,31 +770,9 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:layout_marginTop="-46dp"
-        android:background="#dcddde"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-
-        <Button
-            android:id="@+id/btn_book"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/theme_button_square3_blue"
-            android:drawablePadding="10dp"
-            android:gravity="center|center_vertical"
-            android:paddingLeft="5dp"
-            android:text="@string/book"
-            android:textColor="#ffffff"
-            android:textSize="24dp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-
-</LinearLayout>
+    <Button
+        android:id="@+id/btn_book"
+        style="@style/footer_button"
+        android:layout_alignParentBottom="true"
+        android:text="@string/book" />
+</RelativeLayout>

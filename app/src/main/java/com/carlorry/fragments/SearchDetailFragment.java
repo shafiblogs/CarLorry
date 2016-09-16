@@ -26,7 +26,7 @@ public class SearchDetailFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent containerIntent = new Intent(getActivity(), ContainerActivity.class);
-                containerIntent.putExtra(Constants.BUNDLE_FRAGMENT_ID, Constants.FRAGMENT_BOOK);
+                containerIntent.putExtra(Constants.BUNDLE_FRAGMENT_ID, Constants.FRAGMENT_LOGIN);
                 startActivity(containerIntent);
                 getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
