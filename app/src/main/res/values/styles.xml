@@ -83,7 +83,7 @@
 
     <style name="footer_button" parent="match_wrap">
         <item name="android:textColor">@color/white</item>
-        <item name="android:background">@color/bpDarker_blue</item>
+        <item name="android:background">@drawable/theme_button_square3_blue2</item>
         <item name="android:textSize">@dimen/lar_text_size</item>
         <item name="android:gravity">center</item>
         <item name="android:textAllCaps">true</item>
