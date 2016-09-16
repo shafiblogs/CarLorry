@@ -5,6 +5,11 @@ package com.carlorry.Utils;
  */
 public class Constants {
     public static final String BUNDLE_FRAGMENT_ID = "BUNDLE_FRAGMENT_ID";
+    public static final String PREF_COUNTRY = "PREF_COUNTRY";
+    public static final String PREF_CITY = "PREF_CITY";
+
+    public static final String INDIA = "India";
+    public static final String UAE = "UAE";
 
     public static String KEY_CountrySelection = "CountrySelection";
     public static String KEY_CitySelection = "CitySelection";

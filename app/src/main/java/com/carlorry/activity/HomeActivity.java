@@ -18,11 +18,13 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.carlorry.Utils.AppUtils;
 import com.carlorry.Utils.Constants;
 import com.carlorry.fragments.CitySelectionFragment;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+    Button btnSelCity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,9 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        ((Button) findViewById(R.id.btn_city)).setOnClickListener(this);
+        btnSelCity = (Button) findViewById(R.id.btn_city);
+        btnSelCity.setText(AppUtils.getPref(this, Constants.PREF_CITY));
+        btnSelCity.setOnClickListener(this);
 
         initializeViews();
 
@@ -120,7 +124,7 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(new Intent(HomeActivity.this, SearchResultActivity.class));
                 break;
             case R.id.btn_city:
-                CitySelectionFragment citySelectionFragment = CitySelectionFragment.newInstance(1, false);
+                CitySelectionFragment citySelectionFragment = CitySelectionFragment.newInstance(AppUtils.getPref(this, Constants.PREF_COUNTRY), false);
                 citySelectionFragment.show(getSupportFragmentManager(), Constants.KEY_CitySelection);
                 break;
         }

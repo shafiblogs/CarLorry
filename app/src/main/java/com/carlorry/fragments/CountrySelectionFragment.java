@@ -14,6 +14,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RadioButton;
 
+import com.carlorry.Utils.AppUtils;
 import com.carlorry.Utils.Constants;
 import com.carlorry.activity.R;
 
@@ -22,7 +23,7 @@ import com.carlorry.activity.R;
  */
 public class CountrySelectionFragment extends DialogFragment implements View.OnClickListener {
     private RadioButton rbIndia, rbUAE;
-    private int selCountry = 0;
+    private String selCountry = "India";
 
     public static CountrySelectionFragment newInstance() {
         CountrySelectionFragment dialogFragment = new CountrySelectionFragment();
@@ -50,18 +51,19 @@ public class CountrySelectionFragment extends DialogFragment implements View.OnC
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_done:
+                AppUtils.savePref(getActivity(), Constants.PREF_COUNTRY, selCountry);
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 CitySelectionFragment citySelectionFragment = CitySelectionFragment.newInstance(selCountry, true);
                 citySelectionFragment.show(fm, Constants.KEY_CitySelection);
                 dismiss();
                 break;
             case R.id.rb_india:
-                selCountry = 0;
+                selCountry = Constants.INDIA;
                 rbUAE.setChecked(false);
 //                rbUAE.setButtonDrawable(R.drawable.radio_blank);
                 break;
             case R.id.rb_uae:
-                selCountry = 1;
+                selCountry = Constants.UAE;
                 rbIndia.setChecked(false);
 //                rbIndia.setButtonDrawable(R.drawable.radio_blank);
                 break;

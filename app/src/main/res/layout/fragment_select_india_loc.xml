@@ -10,8 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:minWidth="300dp"
         android:background="@drawable/theme_frame_border_c1"
+        android:minWidth="300dp"
         android:orientation="vertical"
         android:weightSum="1">
 
@@ -20,8 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/theme_frame_border_c2"
-            android:orientation="horizontal"
             android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:padding="@dimen/normal_margin"
             android:weightSum="1">
 
@@ -29,9 +29,9 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/normal_margin"
                 android:layout_weight="1"
                 android:text="@string/india"
-                android:layout_marginLeft="@dimen/normal_margin"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/xlar_text_size" />
 
@@ -42,11 +42,11 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/theme_button_square2"
                 android:gravity="right|center_vertical"
-                android:text="@string/Done"
-                android:textSize="@dimen/nor_text_size"
-                android:textColor="@color/colorPrimary"
+                android:paddingEnd="@dimen/normal_margin"
                 android:paddingRight="@dimen/normal_margin"
-                android:paddingEnd="@dimen/normal_margin"/>
+                android:text="@string/Done"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/nor_text_size" />
 
         </LinearLayout>
 
@@ -61,11 +61,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/normal_margin"
                 android:layout_margin="@dimen/space_margin"
                 android:background="@color/grey_header"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="@dimen/normal_margin">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,24 +78,49 @@
                     android:textSize="@dimen/nor_text_size" />
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/rbBangalore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/radio_button_style1"
                     android:button="@android:color/transparent" />
             </LinearLayout>
 
-            <include layout="@layout/include_location" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_margin"
+                android:background="@color/grey_header"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/normal_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/normal_margin"
+                    android:text="@string/Chennai"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="@dimen/nor_text_size" />
+
+                <RadioButton
+                    android:id="@+id/rbChennai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_button_style1"
+                    android:button="@android:color/transparent" />
+            </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/normal_margin"
                 android:layout_margin="@dimen/space_margin"
                 android:background="@color/grey_header"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="@dimen/normal_margin">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -108,7 +133,7 @@
                     android:textSize="@dimen/nor_text_size" />
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/rbCoimbatore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/radio_button_style1"
@@ -118,11 +143,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/normal_margin"
                 android:layout_margin="@dimen/space_margin"
                 android:background="@color/grey_header"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="@dimen/normal_margin">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -135,16 +160,14 @@
                     android:textSize="@dimen/nor_text_size" />
 
                 <RadioButton
-                    android:id="@+id/radioButton5"
+                    android:id="@+id/rbCochin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/radio_button_style1"
                     android:button="@android:color/transparent" />
             </LinearLayout>
 
-
         </LinearLayout>
-
 
     </LinearLayout>
 
