@@ -63,4 +63,9 @@
     <string name="GooglePlus">Google+</string>
     <string name="Donthaveaccount">Don\'t have an account yet?</string>
     <string name="SignUp">Sign Up</string>
+    <string name="AlreadyHaveanaccount">Already have an account?</string>
+    <string name="Names">Name</string>
+    <string name="PasswordConfirm">Confirm Password</string>
+    <string name="MobileNumber">Mobile Number</string>
+    <string name="DoB">Date of Birth</string>
 </resources>
