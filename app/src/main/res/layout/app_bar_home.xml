@@ -42,7 +42,8 @@
                     android:drawableLeft="@drawable/icon_location_white"
                     android:drawablePadding="@dimen/normal_margin"
                     android:background="@drawable/theme_button_white_text"
-                    android:paddingRight="@dimen/normal_margin"/>
+                    android:paddingRight="@dimen/normal_margin"
+                    android:textSize="@dimen/sml_text_size"/>
 
             </RelativeLayout>
 

@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:minWidth="300dp"
         android:background="@drawable/theme_frame_border_c1"
         android:orientation="vertical"
         android:weightSum="1">
@@ -30,6 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/india"
+                android:layout_marginLeft="@dimen/normal_margin"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/xlar_text_size" />
 
@@ -43,7 +45,8 @@
                 android:text="@string/Done"
                 android:textSize="@dimen/nor_text_size"
                 android:textColor="@color/colorPrimary"
-                android:padding="@dimen/normal_margin" />
+                android:paddingRight="@dimen/normal_margin"
+                android:paddingEnd="@dimen/normal_margin"/>
 
         </LinearLayout>
 
@@ -58,18 +61,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/normal_margin"
                 android:layout_margin="@dimen/space_margin"
                 android:background="@color/grey_header"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="@dimen/normal_margin">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="@dimen/normal_margin"
                     android:text="@string/Bangalore"
                     android:textColor="@color/grey_dark"
                     android:textSize="@dimen/nor_text_size" />
@@ -84,27 +87,25 @@
 
             <include layout="@layout/include_location" />
 
-            <include layout="@layout/include_location" />
-
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:background="#f9f9f9"
+                android:padding="@dimen/normal_margin"
+                android:layout_margin="@dimen/space_margin"
+                android:background="@color/grey_header"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="@dimen/normal_margin"
                     android:text="@string/Coimbatore"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
+                    android:textColor="@color/grey_dark"
+                    android:textSize="@dimen/nor_text_size" />
 
                 <RadioButton
                     android:id="@+id/radioButton4"
@@ -117,21 +118,21 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:background="#f9f9f9"
+                android:padding="@dimen/normal_margin"
+                android:layout_margin="@dimen/space_margin"
+                android:background="@color/grey_header"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="@dimen/normal_margin"
                     android:text="@string/Cochin"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
+                    android:textColor="@color/grey_dark"
+                    android:textSize="@dimen/nor_text_size" />
 
                 <RadioButton
                     android:id="@+id/radioButton5"

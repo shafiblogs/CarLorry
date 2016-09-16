@@ -21,11 +21,11 @@
     <color name="card_rent_car_bg">#009cff</color>
     <color name="card_rent_car_footer">#0492ed</color>
 
-    <color name="card_rent_bike_bg">#2379c9</color>
-    <color name="card_rent_bike_footer">#2070ba</color>
+    <color name="card_rent_bike_bg">#0683db</color>
+    <color name="card_rent_bike_footer">#057bce</color>
 
-    <color name="card_lease_car_bg">#7986cb</color>
-    <color name="card_lease_car_footer">#6f7cbd</color>
+    <color name="card_lease_car_bg">#0070d9</color>
+    <color name="card_lease_car_footer">#005bcb</color>
 
     <color name="card_limousine_bg">#27509b</color>
     <color name="card_limousine_footer">#23488c</color>

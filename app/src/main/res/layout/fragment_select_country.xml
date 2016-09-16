@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/dialog_background_inset"
     android:gravity="center_vertical|center_horizontal"
     android:orientation="vertical">
@@ -42,7 +43,8 @@
                 android:text="@string/Done"
                 android:textSize="@dimen/nor_text_size"
                 android:textColor="@color/colorPrimary"
-                android:padding="@dimen/normal_margin"/>
+                android:paddingRight="@dimen/normal_margin"
+                android:paddingEnd="@dimen/normal_margin"/>
 
         </LinearLayout>
 
@@ -74,12 +76,14 @@
                 android:background="@color/grey_header"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/normal_margin">
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin">
 
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_margin"
                     android:src="@drawable/uae_flag" />
 
                 <TextView
@@ -90,7 +94,8 @@
                     android:paddingLeft="@dimen/screen_margin_small"
                     android:text="@string/uae"
                     android:textColor="@color/grey_dark"
-                    android:textSize="@dimen/nor_text_size" />
+                    android:textSize="@dimen/nor_text_size"
+                    android:layout_marginRight="@dimen/extra_space_half_margin"/>
 
                 <RadioButton
                     android:id="@+id/rb_uae"
@@ -98,7 +103,8 @@
                     android:layout_height="@dimen/radio_width_height_normal"
                     android:background="@drawable/radio_button_style1"
                     android:button="@android:color/transparent"
-                    android:layout_marginLeft="@dimen/normal_margin"/>
+                    android:layout_marginLeft="@dimen/normal_margin"
+                    android:layout_marginRight="@dimen/normal_margin"/>
 
 
             </LinearLayout>
@@ -110,11 +116,13 @@
                 android:background="@color/grey_header"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/normal_margin">
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_margin"
                     android:src="@drawable/india_flag" />
 
                 <TextView
@@ -125,7 +133,8 @@
                     android:paddingLeft="@dimen/screen_margin_small"
                     android:text="@string/india"
                     android:textColor="@color/grey_dark"
-                    android:textSize="@dimen/nor_text_size"  />
+                    android:textSize="@dimen/nor_text_size"
+                    android:layout_marginRight="@dimen/extra_space_half_margin" />
 
                 <RadioButton
                     android:id="@+id/rb_india"
@@ -133,13 +142,18 @@
                     android:layout_height="@dimen/radio_width_height_normal"
                     android:background="@drawable/radio_button_style1"
                     android:button="@android:color/transparent"
-                    android:layout_marginLeft="@dimen/normal_margin" />
+                    android:layout_marginLeft="@dimen/normal_margin"
+                    android:layout_marginRight="@dimen/normal_margin"/>
 
 
             </LinearLayout>
 
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/extra_space_half_margin"
+            android:orientation="vertical"></LinearLayout>
 
 
     </LinearLayout>
