@@ -68,4 +68,6 @@
     <string name="PasswordConfirm">Confirm Password</string>
     <string name="MobileNumber">Mobile Number</string>
     <string name="DoB">Date of Birth</string>
+    <string name="Currency">AED</string>
+
 </resources>

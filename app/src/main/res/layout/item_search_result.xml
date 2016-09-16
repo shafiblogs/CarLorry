@@ -62,7 +62,7 @@
                     android:gravity="left"
                     android:text="03 Sep 11:00"
                     android:textColor="@android:color/black"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/sml_text_size" />
 
             </LinearLayout>
 
@@ -70,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="5dp"
-                android:background="#dcddde"
+                android:background="@color/line_color_dim"
                 android:orientation="vertical"></LinearLayout>
 
             <LinearLayout
@@ -87,7 +87,7 @@
                     android:gravity="left"
                     android:text="06 Sep 16:00"
                     android:textColor="@android:color/black"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/sml_text_size" />
             </LinearLayout>
 
         </LinearLayout>
@@ -97,7 +97,7 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:background="#dcddde"
+            android:background="@color/line_color_dim"
             android:orientation="vertical"></LinearLayout>
 
         <LinearLayout
@@ -113,7 +113,7 @@
                 android:layout_weight="0.5"
                 android:gravity="right|center"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="@dimen/normal_margin">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -121,18 +121,18 @@
                     android:gravity="left"
                     android:text="7000"
                     android:textColor="@android:color/black"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/xlar_text_size"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="left"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="5dp"
-                    android:text="AED"
+                    android:paddingLeft="@dimen/space_margin"
+                    android:paddingRight="@dimen/normal_margin"
+                    android:text="@string/Currency"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/med_text_size" />
 
             </LinearLayout>
 
@@ -143,7 +143,7 @@
                 android:layout_weight="0.5"
                 android:gravity="center|center_vertical"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="@dimen/normal_margin">
 
                 <Button
                     android:id="@+id/btn_book"
@@ -151,10 +151,9 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/theme_button_square3_blue"
                     android:focusable="false"
-                    android:minWidth="90dp"
-                    android:padding="10dp"
+                    android:padding="@dimen/normal_margin"
                     android:text="@string/book"
-                    android:textColor="#ffffff" />
+                    android:textColor="@color/white" />
 
             </LinearLayout>
         </LinearLayout>
