@@ -93,8 +93,8 @@
 
                 <RadioButton
                     android:id="@+id/rb_uae"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/radio_width_height_normal"
+                    android:layout_height="@dimen/radio_width_height_normal"
                     android:background="@drawable/radio_button_style1"
                     android:button="@android:color/transparent"
                     android:layout_marginLeft="@dimen/normal_margin"/>
@@ -128,8 +128,8 @@
 
                 <RadioButton
                     android:id="@+id/rb_india"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="@dimen/radio_width_height_normal"
+                    android:layout_height="@dimen/radio_width_height_normal"
                     android:background="@drawable/radio_button_style1"
                     android:button="@android:color/transparent"
                     android:layout_marginLeft="@dimen/normal_margin" />

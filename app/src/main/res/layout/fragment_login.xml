@@ -2,11 +2,214 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:background="@color/white"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_margin">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/component_margin"
+            android:paddingRight="@dimen/component_margin"
+            android:text="@string/SignIn"
+            android:textColor="@color/black"
+            android:textSize="@dimen/xlar_text_size" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_margin">
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/EmailAddress"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/extra_space_margin"
+            android:layout_marginRight="@dimen/extra_space_margin"
+            android:layout_marginTop="@dimen/component_margin"
+            android:background="@drawable/theme_button_square3_blue"
+            android:text="@string/SignIn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/nor_text_size" />
+
+        <Button
+            android:id="@+id/buttonForgotPswd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/extra_space_margin"
+            android:layout_marginRight="@dimen/extra_space_margin"
+            android:layout_marginTop="@dimen/component_margin"
+            android:background="@drawable/theme_button_white_text"
+            android:text="@string/ForgotPswd"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/nor_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/screen_margin_small"
+        android:layout_marginTop="@dimen/screen_margin_small"
+        android:background="@color/line_color_dim"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/minus_margin"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_margin">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/component_margin"
+            android:paddingRight="@dimen/component_margin"
+            android:text="@string/OR"
+            android:textSize="@dimen/nor_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_margin">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/SignInWith"
+            android:textColor="@color/black"
+            android:textSize="@dimen/xlar_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/extra_space_half_margin"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_margin">
+
+
+        <Button
+            android:id="@+id/buttonFB"
+            android:layout_width="@dimen/standrd_button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/extra_space_half_margin"
+            android:layout_marginRight="@dimen/extra_space_half_margin"
+            android:layout_marginTop="@dimen/component_margin"
+            android:background="@drawable/theme_button_square3_blue"
+            android:text="@string/FaceBook"
+            android:textColor="@color/white"
+            android:textSize="@dimen/nor_text_size" />
+
+        <Button
+            android:id="@+id/buttonGP"
+            android:layout_width="@dimen/standrd_button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/extra_space_half_margin"
+            android:layout_marginRight="@dimen/extra_space_half_margin"
+            android:layout_marginTop="@dimen/component_margin"
+            android:background="@drawable/theme_button_square3_blue"
+            android:text="@string/GooglePlus"
+            android:textColor="@color/white"
+            android:textSize="@dimen/nor_text_size" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/screen_margin_small"
+        android:layout_marginTop="@dimen/screen_margin_small"
+        android:background="@color/line_color_dim"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_margin">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/component_margin"
+            android:paddingRight="@dimen/component_margin"
+            android:text="@string/Donthaveaccount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/xlar_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/extra_space_margin"
+        android:layout_marginRight="@dimen/extra_space_margin"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_margin">
+
+        <Button
+            android:id="@+id/buttonSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/component_margin"
+            android:background="@drawable/theme_button_square3_blue"
+            android:text="@string/SignUp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/nor_text_size" />
+
+    </LinearLayout>
+
+
 </LinearLayout>

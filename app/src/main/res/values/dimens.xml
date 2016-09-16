@@ -9,6 +9,11 @@
     <dimen name="space_margin">2dp</dimen>
     <dimen name="slide_menu_width">200dp</dimen>
     <dimen name="normal_margin">5dp</dimen>
+    <dimen name="extra_space_margin">50dp</dimen>
+    <dimen name="extra_space_half_margin">25dp</dimen>
+    <dimen name="minus_margin">-25dp</dimen>
+
+    <dimen name="standrd_button_width">120dp</dimen>
 
     <dimen name="sml_text_size">12sp</dimen>
     <dimen name="med_text_size">14sp</dimen>
@@ -19,6 +24,8 @@
     <dimen name="nav_header_vertical_spacing">10dp</dimen>
     <dimen name="nav_header_height">140dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="radio_width_height_normal">26dp</dimen>
 
     <dimen name="card_radius">1dp</dimen>
     <dimen name="card_margin">2dp</dimen>

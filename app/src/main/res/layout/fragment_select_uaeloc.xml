@@ -19,8 +19,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/theme_frame_border_c2"
             android:orientation="horizontal"
-            android:paddingBottom="@dimen/normal_margin"
-
+            android:padding="@dimen/normal_margin"
             android:weightSum="1">
 
             <TextView

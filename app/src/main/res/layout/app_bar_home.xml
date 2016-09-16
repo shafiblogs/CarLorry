@@ -32,6 +32,7 @@
                     android:src="@drawable/logo_white" />
 
                 <Button
+                    android:id="@+id/btn_city"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="@string/Bangalore"
@@ -39,7 +40,9 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:drawableLeft="@drawable/icon_location_white"
-                    android:background="@color/bpTransparent"/>
+                    android:drawablePadding="@dimen/normal_margin"
+                    android:background="@drawable/theme_button_white_text"
+                    android:paddingRight="@dimen/normal_margin"/>
 
             </RelativeLayout>
 

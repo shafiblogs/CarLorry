@@ -15,6 +15,7 @@
     <color name="yellow">#FFFF3C</color>
     <color name="ltgreen">#7ACB46</color>
     <color name="green">#3A6616</color>
+    <color name="line_color_dim">#dcddde</color>
 
 
     <color name="card_rent_car_bg">#009cff</color>
