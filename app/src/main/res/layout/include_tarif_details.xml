@@ -19,26 +19,14 @@
                 android:orientation="vertical"
                 android:weightSum="1">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/tv_header"
+                    style="@style/tv_header"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="#f4f4f4"
-                    android:orientation="horizontal">
-
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
-                        android:gravity="left|center_vertical"
-                        android:paddingBottom="5dp"
-                        android:text="@string/tariffdetails"
-                        android:textColor="#333333"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/tariffdetails"
+                    android:gravity="center_horizontal" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -46,6 +34,7 @@
                     android:background="@drawable/theme_frame_border_c4"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/component_margin"
                     android:padding="7dp"
                     android:weightSum="1">
 
