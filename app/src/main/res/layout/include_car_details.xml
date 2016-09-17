@@ -6,29 +6,37 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tv_header"
+                style="@style/tv_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/normal_margin"
+                android:text="@string/cardetails"
+                android:gravity="center_horizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.3"
                 android:orientation="vertical"
-                android:padding="2dp">
+                android:padding="@dimen/space_margin">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:paddingLeft="2dp"
-                    android:paddingRight="2dp"
-                    android:paddingTop="4dp"
+                    android:paddingLeft="@dimen/space_margin"
+                    android:paddingRight="@dimen/space_margin"
+                    android:paddingTop="@dimen/space_margin"
                     android:src="@drawable/sample_img_1" />
 
             </LinearLayout>
@@ -38,199 +46,195 @@
                 android:layout_height="0dp"
                 android:layout_weight="0.7"
                 android:orientation="vertical"
-                android:padding="2dp">
+                android:padding="@dimen/space_margin">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="@dimen/extra_space_margin"
                     android:orientation="horizontal"
-                    android:padding="0dp"
+                    android:padding="@dimen/no_padding"
                     android:weightSum="1">
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/no_padding"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
                         android:background="@drawable/theme_frame_border_c4"
-                        android:gravity="center_vertical"
+                        android:gravity="left|center_vertical"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="left"
-                            android:paddingLeft="2dp"
-                            android:paddingRight="2dp"
-                            android:paddingTop="4dp"
+                            android:paddingLeft="@dimen/space_margin"
+                            android:paddingRight="@dimen/space_margin"
                             android:src="@drawable/seat_icon" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="left"
-                            android:paddingLeft="15dp"
-                            android:text="5 Seat"
-                            android:textColor="#333333"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:layout_height="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/screen_margin"
+                            android:text="@string/Seat5"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/lar_text_size" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/no_padding"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
                         android:background="@drawable/theme_frame_border_c4"
-                        android:gravity="center_vertical"
+                        android:gravity="left|center_vertical"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="left"
-                            android:paddingLeft="2dp"
-                            android:paddingRight="2dp"
-                            android:paddingTop="4dp"
+                            android:paddingLeft="@dimen/space_margin"
+                            android:paddingRight="@dimen/space_margin"
                             android:src="@drawable/musics_icon" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="left"
-                            android:paddingLeft="15dp"
-                            android:text="Audio System"
-                            android:textColor="#333333"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:layout_height="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/screen_margin"
+                            android:text="@string/AudioSystem"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/lar_text_size" />
+
+
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="@dimen/extra_space_margin"
                     android:orientation="horizontal"
-                    android:padding="0dp"
+                    android:padding="@dimen/no_padding"
                     android:weightSum="1">
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/no_padding"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
                         android:background="@drawable/theme_frame_border_c4"
-                        android:gravity="center_vertical"
+                        android:gravity="left|center_vertical"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="left"
-                            android:paddingLeft="2dp"
-                            android:paddingRight="2dp"
-                            android:paddingTop="4dp"
+                            android:paddingLeft="@dimen/space_margin"
+                            android:paddingRight="@dimen/space_margin"
                             android:src="@drawable/gps_icon" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="left"
-                            android:paddingLeft="15dp"
-                            android:text="GPS"
-                            android:textColor="#333333"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:layout_height="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/screen_margin"
+                            android:text="@string/GPS"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/lar_text_size" />
+
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/no_padding"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
                         android:background="@drawable/theme_frame_border_c4"
-                        android:gravity="center_vertical"
+                        android:gravity="left|center_vertical"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="left"
-                            android:paddingLeft="2dp"
-                            android:paddingRight="2dp"
-                            android:paddingTop="4dp"
+                            android:paddingLeft="@dimen/space_margin"
+                            android:paddingRight="@dimen/space_margin"
                             android:src="@drawable/bluetooth_icon" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="left"
-                            android:paddingLeft="15dp"
-                            android:text="Bluetooth"
-                            android:textColor="#333333"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:layout_height="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/screen_margin"
+                            android:text="@string/Bluetooth"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/lar_text_size" />
+
+
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="@dimen/extra_space_margin"
                     android:orientation="horizontal"
-                    android:padding="0dp"
+                    android:padding="@dimen/no_padding"
                     android:weightSum="1">
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/no_padding"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
                         android:background="@drawable/theme_frame_border_c4"
-                        android:gravity="center_vertical"
+                        android:gravity="left|center_vertical"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="left"
-                            android:paddingLeft="2dp"
-                            android:paddingRight="2dp"
-                            android:paddingTop="4dp"
+                            android:paddingLeft="@dimen/space_margin"
+                            android:paddingRight="@dimen/space_margin"
                             android:src="@drawable/ac_icon" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="left"
-                            android:paddingLeft="15dp"
-                            android:text="AC"
-                            android:textColor="#333333"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:layout_height="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/screen_margin"
+                            android:text="@string/AC"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/lar_text_size" />
+
+
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/no_padding"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
                         android:background="@drawable/theme_frame_border_c4"
-                        android:gravity="center_vertical"
+                        android:gravity="left|center_vertical"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="left"
-                            android:paddingLeft="2dp"
-                            android:paddingRight="2dp"
-                            android:paddingTop="4dp"
+                            android:paddingLeft="@dimen/space_margin"
+                            android:paddingRight="@dimen/space_margin"
                             android:src="@drawable/power_window_icon" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="left"
-                            android:paddingLeft="15dp"
-                            android:text="Power Window"
-                            android:textColor="#333333"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:layout_height="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/screen_margin"
+                            android:text="@string/PowerWindow"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/lar_text_size" />
+
 
                     </LinearLayout>
 
@@ -239,71 +243,75 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="@dimen/extra_space_margin"
                     android:orientation="horizontal"
-                    android:padding="0dp"
+                    android:padding="@dimen/no_padding"
                     android:weightSum="1">
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/no_padding"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
                         android:background="@drawable/theme_frame_border_c4"
-                        android:gravity="center_vertical"
+                        android:gravity="left|center_vertical"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="left"
-                            android:paddingLeft="2dp"
-                            android:paddingRight="2dp"
-                            android:paddingTop="4dp"
+                            android:paddingLeft="@dimen/space_margin"
+                            android:paddingRight="@dimen/space_margin"
                             android:src="@drawable/car_gear_icon" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="left"
-                            android:paddingLeft="15dp"
-                            android:text="Manual"
-                            android:textColor="#333333"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:layout_height="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/screen_margin"
+                            android:text="@string/Manual"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/lar_text_size" />
+
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/no_padding"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
                         android:background="@drawable/theme_frame_border_c4"
-                        android:gravity="center_vertical"
+                        android:gravity="left|center_vertical"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="left"
-                            android:paddingLeft="2dp"
-                            android:paddingRight="2dp"
-                            android:paddingTop="4dp"
+                            android:paddingLeft="@dimen/space_margin"
+                            android:paddingRight="@dimen/space_margin"
                             android:src="@drawable/petrol_icon" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="left"
-                            android:paddingLeft="15dp"
-                            android:text="Diesel"
-                            android:textColor="#333333"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:layout_height="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/screen_margin"
+                            android:text="@string/Diesel"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/lar_text_size" />
+
 
                     </LinearLayout>
 
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/extra_space_margin"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/no_padding"></LinearLayout>
 
             </LinearLayout>
 
