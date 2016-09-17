@@ -33,6 +33,17 @@ public class LoginFragment extends Fragment {
             }
         });
 
+        ((Button) rootView.findViewById(R.id.btn_forgot_pwd)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent containerIntent = new Intent(getActivity(), ContainerActivity.class);
+                containerIntent.putExtra(Constants.BUNDLE_FRAGMENT_ID, Constants.FRAGMENT_FORGOT_PASSWORD);
+                startActivity(containerIntent);
+                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                getActivity().finish();
+            }
+        });
+
 
         return rootView;
     }

@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 import com.carlorry.Utils.Constants;
 import com.carlorry.fragments.BookFragment;
+import com.carlorry.fragments.ForgotPasswordFragment;
 import com.carlorry.fragments.LoginFragment;
 import com.carlorry.fragments.SearchDetailFragment;
 import com.carlorry.fragments.SignUpFragment;
@@ -63,6 +64,10 @@ public class ContainerActivity extends AppCompatActivity {
                 break;
             case Constants.FRAGMENT_LOGIN:
                 ft.replace(R.id.container, new LoginFragment(), Constants.KEY_LOGIN);
+                ft.commit();
+                break;
+            case Constants.FRAGMENT_FORGOT_PASSWORD:
+                ft.replace(R.id.container, new ForgotPasswordFragment(), Constants.KEY_FORGOT_PASSWORD);
                 ft.commit();
                 break;
             default:
