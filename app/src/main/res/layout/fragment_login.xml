@@ -50,7 +50,11 @@
 
                     <EditText
                         android:id="@+id/et_email"
-                        style="@style/edit_text" />
+                        style="@style/edit_text"
+                        android:drawableLeft="@drawable/icon_emails"
+                        android:drawablePadding="@dimen/text_icon_padding"
+                        android:textSize="@dimen/nor_text_size"
+                        android:paddingLeft="@dimen/normal_margin" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -61,7 +65,11 @@
 
                     <EditText
                         android:id="@+id/et_password"
-                        style="@style/edit_text" />
+                        style="@style/edit_text"
+                        android:drawableLeft="@drawable/icon_password"
+                        android:drawablePadding="@dimen/text_icon_padding"
+                        android:textSize="@dimen/nor_text_size"
+                        android:paddingLeft="@dimen/normal_margin" />
                 </android.support.design.widget.TextInputLayout>
 
                 <Button
@@ -156,10 +164,13 @@
                     android:layout_marginLeft="@dimen/extra_space_half_margin"
                     android:layout_marginRight="@dimen/extra_space_half_margin"
                     android:layout_marginTop="@dimen/component_margin"
-                    android:background="@drawable/theme_button_square3_blue"
+                    android:background="@drawable/theme_button_facebook"
                     android:text="@string/FaceBook"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/nor_text_size" />
+                    android:textSize="@dimen/nor_text_size"
+                    android:drawableLeft="@drawable/icon_facebook_white"
+                    android:drawablePadding="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin"/>
 
                 <Button
                     android:id="@+id/buttonGP"
@@ -169,10 +180,13 @@
                     android:layout_marginLeft="@dimen/extra_space_half_margin"
                     android:layout_marginRight="@dimen/extra_space_half_margin"
                     android:layout_marginTop="@dimen/component_margin"
-                    android:background="@drawable/theme_button_square3_blue"
+                    android:background="@drawable/theme_button_googleplus"
                     android:text="@string/GooglePlus"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/nor_text_size" />
+                    android:textSize="@dimen/nor_text_size"
+                    android:drawableLeft="@drawable/icon_googleplus_white"
+                    android:drawablePadding="@dimen/normal_margin"
+                    android:padding="@dimen/normal_margin" />
 
 
             </LinearLayout>

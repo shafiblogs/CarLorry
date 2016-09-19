@@ -35,4 +35,7 @@
 
     <dimen name="popup_width">320dp</dimen>
     <dimen name="popup_height">400dp</dimen>
+
+    <dimen name="text_height_normal">32dp</dimen>
+    <dimen name="text_icon_padding">10dp</dimen>
 </resources>
