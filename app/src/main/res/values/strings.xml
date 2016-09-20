@@ -15,7 +15,7 @@
     <string name="Chennai">Chennai</string>
     <string name="Coimbatore">Coimbatore</string>
     <string name="Cochin">Cochin</string>
-    <string name="SelectCountry">Select Country</string>
+    <string name="SelectCountry">Select Your Country</string>
     <string name="SelectLocation">Select Location</string>
     <string name="Done">Done</string>
     <string name="title_activity_select_india_loc">SelectIndiaLoc</string>
