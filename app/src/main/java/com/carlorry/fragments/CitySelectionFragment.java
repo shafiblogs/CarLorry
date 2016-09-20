@@ -2,8 +2,6 @@ package com.carlorry.fragments;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -66,7 +64,7 @@ public class CitySelectionFragment extends DialogFragment implements View.OnClic
             rbCountryIDs.add(R.id.rbUmmAlQaiwain);
             rbCountryIDs.add(R.id.rbRasAlKhaimah);
             rbCountryIDs.add(R.id.rbFujairah);
-            rootView = inflater.inflate(R.layout.fragment_select_uaeloc, container);
+            rootView = inflater.inflate(R.layout.city_selected_view, container);
         }
 
         intializeViews(rootView);
