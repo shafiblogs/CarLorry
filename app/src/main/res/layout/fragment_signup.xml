@@ -42,52 +42,98 @@
                 android:orientation="vertical"
                 android:padding="@dimen/normal_margin">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/editText"
+                <android.support.design.widget.TextInputLayout
+                    style="@style/match_wrap"
                     android:layout_gravity="center_horizontal"
-                    android:hint="@string/Names" />
+                    android:layout_marginTop="@dimen/component_margin"
+                    android:hint="@string/Names">
 
-                <EditText
-                    android:id="@+id/editText3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    <EditText
+                        android:id="@+id/et_fullname"
+                        style="@style/edit_text"
+                        android:drawableLeft="@drawable/icon_users"
+                        android:drawablePadding="@dimen/text_icon_padding"
+                        android:textSize="@dimen/nor_text_size"
+                        android:paddingLeft="@dimen/normal_margin"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/match_wrap"
                     android:layout_gravity="center_horizontal"
-                    android:hint="@string/EmailAddress"
-                    android:inputType="textEmailAddress" />
+                    android:layout_marginTop="@dimen/component_margin"
+                    android:hint="@string/EmailAddress">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="phone"
-                    android:ems="10"
-                    android:id="@+id/editText4"
+                    <EditText
+                        android:id="@+id/et_emailaddress"
+                        style="@style/edit_text"
+                        android:drawableLeft="@drawable/icon_emails"
+                        android:drawablePadding="@dimen/text_icon_padding"
+                        android:textSize="@dimen/nor_text_size"
+                        android:paddingLeft="@dimen/normal_margin"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/match_wrap"
                     android:layout_gravity="center_horizontal"
-                    android:hint="@string/MobileNumber"/>
+                    android:layout_marginTop="@dimen/component_margin"
+                    android:hint="@string/MobileNumber">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:ems="10"
-                    android:id="@+id/editText5"
+                    <EditText
+                        android:id="@+id/et_mobileno"
+                        style="@style/edit_text"
+                        android:drawableLeft="@drawable/icon_mobile"
+                        android:drawablePadding="@dimen/text_icon_padding"
+                        android:textSize="@dimen/nor_text_size"
+                        android:paddingLeft="@dimen/normal_margin"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/match_wrap"
                     android:layout_gravity="center_horizontal"
-                    android:hint="@string/DoB"/>
+                    android:layout_marginTop="@dimen/component_margin"
+                    android:hint="@string/DoB">
 
-                <EditText
-                    android:id="@+id/editText2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/Password"
-                    android:inputType="textPassword" />
+                    <EditText
+                        android:id="@+id/et_dob"
+                        style="@style/edit_text"
+                        android:drawableLeft="@drawable/icon_calender_dob"
+                        android:drawablePadding="@dimen/text_icon_padding"
+                        android:textSize="@dimen/nor_text_size"
+                        android:paddingLeft="@dimen/normal_margin"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    style="@style/match_wrap"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/component_margin"
+                    android:hint="@string/Password">
 
-                <EditText
-                    android:id="@+id/editText7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/PasswordConfirm"
-                    android:inputType="textPassword" />
+                    <EditText
+                        android:id="@+id/et_password"
+                        style="@style/edit_text"
+                        android:drawableLeft="@drawable/icon_password"
+                        android:drawablePadding="@dimen/text_icon_padding"
+                        android:textSize="@dimen/nor_text_size"
+                        android:paddingLeft="@dimen/normal_margin" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/match_wrap"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/component_margin"
+                    android:hint="@string/PasswordConfirm">
+
+                    <EditText
+                        android:id="@+id/et_passwordconfirm"
+                        style="@style/edit_text"
+                        android:drawableLeft="@drawable/icon_password_confirm"
+                        android:drawablePadding="@dimen/text_icon_padding"
+                        android:textSize="@dimen/nor_text_size"
+                        android:paddingLeft="@dimen/normal_margin" />
+
+                </android.support.design.widget.TextInputLayout>
 
                 <Button
                     android:id="@+id/button"
