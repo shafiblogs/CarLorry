@@ -1,5 +1,7 @@
 package com.carlorry.Utils;
 
+import java.util.ArrayList;
+
 /**
  * Created by muhammed.poyil on 8/20/2016.
  */
@@ -24,5 +26,19 @@ public class Constants {
     public static final int FRAGMENT_BOOK = 11;
     public static final int FRAGMENT_LOGIN = 12;
     public static final int FRAGMENT_SIGN_UP = 13;
-
+    public static final String[] indiaCities = new String[]{
+            "Bangalore",
+            "Coimbatore",
+            "Chennai",
+            "Cochin"
+    };
+    public static final String[] uaeCities = new String[]{
+            "Abu Dhabi",
+            "Dubai",
+            "Sharjah",
+            "Ajman",
+            "Ras Al-Khaimah",
+            "Fujairah",
+            "Umm Al-Qaiwain"
+    };
 }

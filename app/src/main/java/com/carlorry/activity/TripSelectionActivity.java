@@ -2,38 +2,49 @@ package com.carlorry.activity;
 
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.carlorry.Utils.Constants;
-import com.carlorry.fragments.CountrySelectionFragment;
 import com.carlorry.fragments.TimePickerFragment;
-import com.carlorry.fragments.TimeSelectionFragment;
 import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidListener;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
+
+import static com.carlorry.activity.R.id.view;
 
 /**
  * Created by muhammed.poyil on 8/20/2016.
  */
 public class TripSelectionActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, TimePickerDialog.OnTimeSetListener {
-//    private TextView tvStartDate, tvEndDate, tvStartTime, tvEndTime;
-//    private LinearLayout layStart, layEnd;
-//    private boolean isStartSelected = false;
+    private TextView tvStartDate, tvEndDate, tvStartTime, tvEndTime;
+    //    private LinearLayout layStart, layEnd;
+    private boolean isStartSelected = true;
+    private CaldroidFragment startDateFragment;
+    private CaldroidFragment endDateFragment;
+    private SimpleDateFormat startEndDateFormatter = new SimpleDateFormat("EEE, dd MMM", Locale.getDefault());
+    private SimpleDateFormat currentDateFormatter = new SimpleDateFormat("EEE, dd MMM hh aa", Locale.getDefault());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,25 +62,16 @@ public class TripSelectionActivity extends AppCompatActivity implements Navigati
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
         initializeUI();
+        showStartDateCalendar();
+//        setCurrentDate();
+    }
 
-        final SimpleDateFormat formatter = new SimpleDateFormat("dd MMM yyyy");
-
-        CaldroidFragment caldroidFragment = new CaldroidFragment();
-        Bundle args = new Bundle();
-        Calendar cal = Calendar.getInstance();
-        args.putInt(CaldroidFragment.MONTH, cal.get(Calendar.MONTH) + 1);
-        args.putInt(CaldroidFragment.YEAR, cal.get(Calendar.YEAR));
-        caldroidFragment.setArguments(args);
-        //
-        caldroidFragment.setCaldroidListener(listener);
-//        tvStartDate.setText(formatter.format(cal.getTime()));
-//        tvEndDate.setText(formatter.format(cal.getTime()));
-
-        FragmentTransaction t = getSupportFragmentManager().beginTransaction();
-        t.replace(R.id.container, caldroidFragment);
-        t.commit();
+    private void setCurrentDate() {
+        Calendar c = Calendar.getInstance();
+        String formattedDate = currentDateFormatter.format(c.getTime());
+        tvStartDate.setText(formattedDate);
+        tvEndDate.setText(formattedDate);
     }
 
     @Override
@@ -111,8 +113,8 @@ public class TripSelectionActivity extends AppCompatActivity implements Navigati
     }
 
     private void initializeUI() {
-//        tvStartDate = (TextView) findViewById(R.id.tv_start_date);
-//        tvEndDate = (TextView) findViewById(R.id.tv_end_date);
+        tvStartDate = (TextView) findViewById(R.id.trip_start_date);
+        tvEndDate = (TextView) findViewById(R.id.trip_end_date);
 //        tvStartTime = (TextView) findViewById(R.id.tv_start_time);
 //        tvEndTime = (TextView) findViewById(R.id.tv_end_time);
 //        layStart = (LinearLayout) findViewById(R.id.lay_start);
@@ -121,15 +123,16 @@ public class TripSelectionActivity extends AppCompatActivity implements Navigati
         ((Button) findViewById(R.id.btn_continue)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if (isStartSelected) {
-//                    isStartSelected = false;
-//                    layStart.setBackgroundColor(getResources().getColor(R.color.white));
-//                    layEnd.setBackgroundColor(getResources().getColor(R.color.lt_grey));
-//                } else {
-//                    isStartSelected = true;
-//                    layStart.setBackgroundColor(getResources().getColor(R.color.lt_grey));
-//                    layEnd.setBackgroundColor(getResources().getColor(R.color.white));
-//                }
+                String startDate = tvStartDate.getText().toString();
+                String endDate = tvEndDate.getText().toString();
+                if (TextUtils.isEmpty(startDate)) {
+                    Toast.makeText(TripSelectionActivity.this, "Please select start date", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(endDate)) {
+                    Toast.makeText(TripSelectionActivity.this, "Please select end date", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 Intent intent = new Intent(TripSelectionActivity.this, SearchResultActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
@@ -138,32 +141,47 @@ public class TripSelectionActivity extends AppCompatActivity implements Navigati
     }
 
     final CaldroidListener listener = new CaldroidListener() {
-        final SimpleDateFormat formatter = new SimpleDateFormat("dd MMM yyyy");
+
 
         @Override
-        public void onSelectDate(Date date, View view) {
-//            if (isStartSelected)
-//                tvEndDate.setText(formatter.format(date));
-//            else
-//                tvStartDate.setText(formatter.format(date));
-//            TimeSelectionFragment timeSelectionFragment = TimeSelectionFragment.newInstance();
-//            timeSelectionFragment.show(getSupportFragmentManager(), Constants.KEY_TimeSelection);
-
+        public void onSelectDate(final Date date, final View view) {
+            if (isStartSelected) {
+                startDateFragment.refreshView();
+            }
             TimePickerFragment timeSelectionFragment = new TimePickerFragment();
+            timeSelectionFragment.setTimeSetListener(new TimePickerDialog.OnTimeSetListener() {
+                @Override
+                public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                    try {
+                        String _24HourTime = "" + i;
+                        SimpleDateFormat _24HourSDF = new SimpleDateFormat("HH", Locale.getDefault());
+                        SimpleDateFormat _12HourSDF = new SimpleDateFormat("hh aa", Locale.getDefault());
+                        Date _24HourDt = _24HourSDF.parse(_24HourTime);
+                        if (isStartSelected) {
+                            isStartSelected = false;
+                            tvStartDate.setText(startEndDateFormatter.format(date) + " " + _12HourSDF.format(_24HourDt));
+                            view.setBackgroundColor(ActivityCompat.getColor(TripSelectionActivity.this, R.color.bpBlue));
+                        } else {
+                            isStartSelected = true;
+                            tvEndDate.setText(startEndDateFormatter.format(date) + " " + _12HourSDF.format(_24HourDt));
+                            view.setBackgroundColor(ActivityCompat.getColor(TripSelectionActivity.this, R.color.red));
+                        }
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            });
             timeSelectionFragment.show(getSupportFragmentManager(), Constants.KEY_TimeSelection);
         }
 
         @Override
         public void onChangeMonth(int month, int year) {
-            String text = "month: " + month + " year: " + year;
+
         }
 
         @Override
         public void onLongClickDate(Date date, View view) {
-//            if (isStartSelected)
-//                tvEndDate.setText(formatter.format(date));
-//            else
-//                tvStartDate.setText(formatter.format(date));
         }
 
         @Override
@@ -174,6 +192,41 @@ public class TripSelectionActivity extends AppCompatActivity implements Navigati
 
     @Override
     public void onTimeSet(TimePicker timePicker, int i, int i1) {
+
+    }
+
+    private void showStartDateCalendar() {
+        if (null != endDateFragment) {
+            final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.remove(endDateFragment);
+            ft.commit();
+        }
+        startDateFragment = new CaldroidFragment();
+        Bundle args = new Bundle();
+        Calendar cal = Calendar.getInstance();
+        args.putInt(CaldroidFragment.MONTH, cal.get(Calendar.MONTH) + 1);
+        args.putInt(CaldroidFragment.YEAR, cal.get(Calendar.YEAR));
+        args.putInt(CaldroidFragment.THEME_RESOURCE, R.style.CaldroidDefaultDark);
+        startDateFragment.setArguments(args);
+        startDateFragment.setCaldroidListener(listener);
+        FragmentTransaction t = getSupportFragmentManager().beginTransaction();
+        t.add(R.id.container, startDateFragment);
+        t.commit();
+
+    }
+
+    private void showEndDateCalendar() {
+        final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.remove(startDateFragment);
+        ft.commit();
+        endDateFragment = new CaldroidFragment();
+        Bundle args = new Bundle();
+        Calendar cal = Calendar.getInstance();
+        args.putInt(CaldroidFragment.MONTH, cal.get(Calendar.MONTH) + 1);
+        args.putInt(CaldroidFragment.YEAR, cal.get(Calendar.YEAR));
+        endDateFragment.setArguments(args);
+        getSupportFragmentManager().beginTransaction().add(R.id.container, endDateFragment).commit();
+        endDateFragment.setCaldroidListener(listener);
 
     }
 }
