@@ -14,6 +14,7 @@
     <dimen name="minus_margin">-25dp</dimen>
 
     <dimen name="standrd_button_width">120dp</dimen>
+    <dimen name="no_padding">0dp</dimen>
 
     <dimen name="sml_text_size">12sp</dimen>
     <dimen name="med_text_size">14sp</dimen>
@@ -34,4 +35,7 @@
 
     <dimen name="popup_width">320dp</dimen>
     <dimen name="popup_height">400dp</dimen>
+
+    <dimen name="text_height_normal">32dp</dimen>
+    <dimen name="text_icon_padding">10dp</dimen>
 </resources>

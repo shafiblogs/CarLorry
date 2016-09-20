@@ -70,4 +70,21 @@
     <string name="DoB">Date of Birth</string>
     <string name="Currency">AED</string>
 
+    <string name="Diesel">Diesel</string>
+    <string name="Petrol">Petrol</string>
+    <string name="Manual">Manual</string>
+    <string name="Automatic">Automatic</string>
+    <string name="PowerWindow">Power Window</string>
+    <string name="AC">AC</string>
+    <string name="ACNon">Non AC</string>
+    <string name="Bluetooth">Bluetooth</string>
+    <string name="GPS">GPS</string>
+    <string name="AudioSystem">Audio System</string>
+    <string name="Seat5">5 Seat</string>
+    <string name="Seat2">2 Seat</string>
+    <string name="Seat7">7 Seat</string>
+
+    <string name="locationdetails">Location Details</string>
+    <string name="cardetails">Car Details</string>
+    <string name="newpassword">Send New Password</string>
 </resources>
