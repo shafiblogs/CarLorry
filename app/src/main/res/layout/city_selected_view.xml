@@ -2,19 +2,59 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dialog_background_inset"
+    android:background="@drawable/theme_frame_border_c1"
     android:gravity="center_vertical|center_horizontal"
     android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/screen_margin_small"
+        android:text="Country"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/xlar_text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bpBlue" />
+
+    <ListView
+        android:id="@+id/city_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/caldroid_gray"
+        android:dividerHeight="1dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/caldroid_gray" />
+
+    <Button
+        android:id="@+id/btn_done"
+        style="@android:style/Holo.Light.ButtonBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/screen_margin_small"
+        android:background="@drawable/oval_border_black"
+        android:gravity="center"
+        android:paddingEnd="@dimen/normal_margin"
+        android:paddingStart="@dimen/normal_margin"
+        android:text="@string/Done"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/nor_text_size" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/theme_frame_border_c1"
         android:orientation="vertical"
+        android:visibility="gone"
         android:weightSum="1">
 
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/theme_frame_border_c2"
@@ -23,21 +63,12 @@
             android:padding="@dimen/normal_margin"
             android:weightSum="1">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/normal_margin"
-                android:layout_weight="1"
-                android:text="@string/uae"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/xlar_text_size" />
 
             <Button
-                android:id="@+id/btn_done"
                 style="@android:style/Holo.Light.ButtonBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:background="@drawable/theme_button_square2"
                 android:gravity="right|center_vertical"
                 android:paddingEnd="@dimen/normal_margin"
@@ -46,7 +77,7 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/nor_text_size" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
         <LinearLayout
