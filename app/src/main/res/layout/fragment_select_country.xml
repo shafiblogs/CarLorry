@@ -156,9 +156,9 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/screen_margin_small"
                 android:layout_marginTop="@dimen/screen_margin_small"
-                android:background="@drawable/oval_border_black"
+                android:background="@drawable/theme_button_square3_blue"
                 android:text="@string/Done"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/white"
                 android:textSize="@dimen/nor_text_size" />
         </LinearLayout>
 

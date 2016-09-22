@@ -2,8 +2,8 @@ package com.carlorry.activity;
 
 import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
@@ -26,13 +26,16 @@ import com.carlorry.fragments.TimePickerFragment;
 import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidListener;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
-
-import static com.carlorry.activity.R.id.view;
+import java.util.Map;
 
 /**
  * Created by muhammed.poyil on 8/20/2016.
@@ -45,6 +48,9 @@ public class TripSelectionActivity extends AppCompatActivity implements Navigati
     private CaldroidFragment endDateFragment;
     private SimpleDateFormat startEndDateFormatter = new SimpleDateFormat("EEE, dd MMM", Locale.getDefault());
     private SimpleDateFormat currentDateFormatter = new SimpleDateFormat("EEE, dd MMM hh aa", Locale.getDefault());
+    private Date startDate;
+    private Date endDate;
+    private List<Date> selectedDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,7 +152,25 @@ public class TripSelectionActivity extends AppCompatActivity implements Navigati
         @Override
         public void onSelectDate(final Date date, final View view) {
             if (isStartSelected) {
+                startDate = date;
+            } else {
+                endDate = date;
+            }
+            if (isExpire(date)) {
+                Toast.makeText(TripSelectionActivity.this, "Please select a valid date", Toast.LENGTH_LONG).show();
+                return;
+            }
+            if (null != startDate && null != endDate) {
+                if (startDate.after(endDate)) {
+                    Toast.makeText(TripSelectionActivity.this, "Please select a valid end date", Toast.LENGTH_LONG).show();
+                    return;
+                }
+            }
+            if (isStartSelected) {
+                startDateFragment.clearBackgroundDrawableForDates(selectedDate);
                 startDateFragment.refreshView();
+                tvStartDate.setText("");
+                tvEndDate.setText("");
             }
             TimePickerFragment timeSelectionFragment = new TimePickerFragment();
             timeSelectionFragment.setTimeSetListener(new TimePickerDialog.OnTimeSetListener() {
@@ -160,12 +184,20 @@ public class TripSelectionActivity extends AppCompatActivity implements Navigati
                         if (isStartSelected) {
                             isStartSelected = false;
                             tvStartDate.setText(startEndDateFormatter.format(date) + " " + _12HourSDF.format(_24HourDt));
-                            view.setBackgroundColor(ActivityCompat.getColor(TripSelectionActivity.this, R.color.bpBlue));
+                            tvStartDate.setTextColor(ActivityCompat.getColor(TripSelectionActivity.this, R.color.bpBlue));
+                            startDateFragment.setBackgroundDrawableForDate(new ColorDrawable(ActivityCompat.getColor(TripSelectionActivity.this, R.color.bpBlue)), date);
+                            startDateFragment.refreshView();
                         } else {
                             isStartSelected = true;
                             tvEndDate.setText(startEndDateFormatter.format(date) + " " + _12HourSDF.format(_24HourDt));
-                            view.setBackgroundColor(ActivityCompat.getColor(TripSelectionActivity.this, R.color.red));
+                            tvEndDate.setTextColor(ActivityCompat.getColor(TripSelectionActivity.this, R.color.red));
+                            startDateFragment.setBackgroundDrawableForDates(getDates(startDate, endDate));
+                            startDateFragment.refreshView();
+                            startDate = null;
+                            endDate = null;
+
                         }
+
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
@@ -193,6 +225,60 @@ public class TripSelectionActivity extends AppCompatActivity implements Navigati
     @Override
     public void onTimeSet(TimePicker timePicker, int i, int i1) {
 
+    }
+
+    private Map<Date, Drawable> getDates(Date startDate, Date endDate) {
+        selectedDate = new ArrayList<>();
+        Map<Date, Drawable> dates = new HashMap<>();
+        DateFormat df1 = new SimpleDateFormat("yyyy-MM-dd");
+
+
+        Calendar cal1 = Calendar.getInstance();
+        cal1.setTime(startDate);
+
+
+        Calendar cal2 = Calendar.getInstance();
+        cal2.setTime(endDate);
+
+        while (!cal1.after(cal2)) {
+            dates.put(cal1.getTime(), new ColorDrawable(ActivityCompat.getColor(TripSelectionActivity.this, R.color.bpBlue)));
+            selectedDate.add(cal1.getTime());
+            cal1.add(Calendar.DATE, 1);
+        }
+        return dates;
+    }
+
+    private boolean isExpire(Date d) {
+
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM-dd-yyyy", Locale.getDefault()); // Jan-20-2015 1:30:55 PM
+        Date d1 = null;
+        String today = getToday("MMM-dd-yyyy");
+        try {
+            d1 = sdf.parse(today);
+            if (d1.compareTo(d) < 0) {// not expired
+                return false;
+            } else if (d.compareTo(d1) == 0) {// both date are same
+                if (d.getTime() < d1.getTime()) {// not expired
+                    return false;
+                } else if (d.getTime() == d1.getTime()) {//expired
+                    return false;
+                } else {//expired
+                    return false;
+                }
+            } else {//expired
+                return true;
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+    }
+
+
+    public static String getToday(String format) {
+        Date date = new Date();
+        return new SimpleDateFormat(format).format(date);
     }
 
     private void showStartDateCalendar() {
