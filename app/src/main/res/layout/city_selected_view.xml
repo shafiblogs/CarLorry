@@ -6,42 +6,46 @@
     android:gravity="center_vertical|center_horizontal"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/screen_margin_small"
-        android:text="Country"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/xlar_text_size" />
-
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/bpBlue" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/screen_margin_small"
+            android:text="Country"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/xlar_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bpBlue" />
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/city_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:divider="@color/caldroid_gray"
-        android:dividerHeight="1dp" />
+        android:dividerHeight="1dp"
+        android:paddingLeft="@dimen/normal_margin"
+        android:paddingRight="@dimen/normal_margin"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/caldroid_gray" />
 
     <Button
         android:id="@+id/btn_done"
-        style="@android:style/Holo.Light.ButtonBar"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/standrd_button_width"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/screen_margin_small"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/screen_margin_small"
+        android:layout_marginTop="@dimen/screen_margin_small"
         android:background="@drawable/theme_button_square3_blue"
-        android:gravity="center"
-        android:paddingEnd="@dimen/normal_margin"
-        android:paddingStart="@dimen/normal_margin"
         android:text="@string/Done"
         android:textColor="@color/white"
         android:textSize="@dimen/nor_text_size" />
