@@ -145,7 +145,7 @@ public class HomeActivity extends AppCompatActivity
         cardViewRentCar.setBackgroundColor(getResources().getColor(R.color.card_rent_car_bg));
         bottomRentCar.setBackgroundColor(getResources().getColor(R.color.card_rent_car_footer));
         ((TextView) viewRentCar.findViewById(R.id.tv_footer)).setText("RENT A CAR");
-        ((ImageView) viewRentCar.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_rent_car);
+        ((ImageView) viewRentCar.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_icon_rentcar);
         viewRentCar.setOnClickListener(this);
 
         RelativeLayout cardViewLeaseCar = (RelativeLayout) viewLeaseCar.findViewById(R.id.card_view);
@@ -153,7 +153,7 @@ public class HomeActivity extends AppCompatActivity
         cardViewLeaseCar.setBackgroundColor(getResources().getColor(R.color.card_lease_car_bg));
         bottomLeaseCar.setBackgroundColor(getResources().getColor(R.color.card_lease_car_footer));
         ((TextView) viewLeaseCar.findViewById(R.id.tv_footer)).setText("LEASE A CAR");
-        ((ImageView) viewLeaseCar.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_lease_car);
+        ((ImageView) viewLeaseCar.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_icon_lease);
         viewLeaseCar.setOnClickListener(this);
 
         RelativeLayout cardViewRentBike = (RelativeLayout) viewRentBike.findViewById(R.id.card_view);
@@ -161,7 +161,7 @@ public class HomeActivity extends AppCompatActivity
         cardViewRentBike.setBackgroundColor(getResources().getColor(R.color.card_rent_bike_bg));
         bottomRentBike.setBackgroundColor(getResources().getColor(R.color.card_rent_bike_footer));
         ((TextView) viewRentBike.findViewById(R.id.tv_footer)).setText("RENT A BIKE");
-        ((ImageView) viewRentBike.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_rent_bike);
+        ((ImageView) viewRentBike.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_icon_bike);
         viewRentBike.setOnClickListener(this);
 
         RelativeLayout cardViewLimousine = (RelativeLayout) viewLimousine.findViewById(R.id.card_view);
@@ -169,7 +169,7 @@ public class HomeActivity extends AppCompatActivity
         cardViewLimousine.setBackgroundColor(getResources().getColor(R.color.card_limousine_bg));
         bottomLimousine.setBackgroundColor(getResources().getColor(R.color.card_limousine_footer));
         ((TextView) viewLimousine.findViewById(R.id.tv_footer)).setText("LIMOUSINE");
-        ((ImageView) viewLimousine.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_limousine);
+        ((ImageView) viewLimousine.findViewById(R.id.iv_card)).setImageResource(R.drawable.card_icon_limo);
         viewLimousine.setOnClickListener(this);
     }
 }
